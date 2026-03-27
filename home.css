@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+  background: #f6f7fb;
+  font-family: "Segoe UI", sans-serif;
+}
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: white;
+    align-items: center;
+}
+
+header nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.btn {
+    padding: 8px 15px;
+    border: none;
+    background: #6c63ff;
+    color: white;
+    border-radius: 5px;
+}
+/* CONTAINER */
+section {
+  padding: 80px 20px;
+}
+
+section h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #f3f0ff, #ffffff);
+  border-radius: 20px;
+  margin: 20px;
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  color: #666;
+}
+
+.primary {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  background: #6c63ff;
+  color: white;
+  cursor: pointer;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* CARD STYLE (KEY) */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* PROBLEMS */
+.problems {
+  background: #fff;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+/* FEATURES */
+.features {
+  background: #f0f4ff;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+/* TEST */
+.test {
+  background: linear-gradient(135deg, #e0e7ff, #f8faff);
+  border-radius: 20px;
+  margin: 20px;
+}
+
+/* COMMUNITY */
+.community {
+  background: #fff;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+/* EXPERT */
+.expert {
+  background: #eefaf5;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+/* RELAX */
+.relax {
+  background: #fffaf0;
+  border-radius: 20px;
+  margin: 20px;
+}
+/* EMERGENCY */
+.emergency {
+  background: #ff4d4d;
+  color: white;
+}
+
+.danger {
+  background: white;
+  color: red;
+  padding: 10px 20px;
+  border: none;
+  margin-top: 10px;
+}
+.emergency {
+  background: #fff5f5;
+  padding: 60px 40px;
+}
+
+.emergency-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* LEFT */
+.emergency-left {
+  text-align: left;
+}
+
+.emergency-left h2 {
+  color: #ff4d4d;
+  margin-bottom: 15px;
+}
+
+.hotline {
+  margin: 20px 0;
+}
+
+.hotline h3 {
+  font-size: 24px;
+  color: #ff4d4d;
+}
+
+/* RIGHT */
+.emergency-right {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.emergency-right form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.emergency-right input,
+.emergency-right select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.emergency-right button {
+  margin-top: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .emergency-container {
+    grid-template-columns: 1fr;
+  }
+}
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: white;
+}

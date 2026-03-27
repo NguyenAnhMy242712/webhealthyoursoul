@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LMS Dashboard - Stella Walton</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <main class="main-content">
+        <header class="header">
+          <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search" />
+          </div>
+          <div class="date-now">12 May 2022, Friday</div>
+        </header>
+
+        <section class="banner">
+          <div class="banner-text">
+            <h1>Welcome back, Stella Walton!</h1>
+            <p>
+              New French speaking classes are available.<br />Étudier en France
+              for B1 and B2 levels. <a href="#">Learn more</a>
+            </p>
+            <button class="btn-buy">Buy Lesson</button>
+          </div>
+          <div class="banner-img">
+            <img
+              src="https://via.placeholder.com/150"
+              alt="Books Illustration"
+            />
+          </div>
+        </section>
+
+        <section class="section-classes">
+          <div class="section-header">
+            <h2>Classes</h2>
+            <a href="#" class="view-all">View All ></a>
+          </div>
+          <div class="class-cards">
+            <div class="card card-purple">
+              <h3>English - UNIT III</h3>
+              <p><i class="far fa-file"></i> 10 Files</p>
+              <p><i class="far fa-user"></i> Teacher: Leona Jimenez</p>
+            </div>
+            <div class="card card-blue">
+              <h3>English - UNIT II</h3>
+              <p><i class="far fa-file"></i> 12 Files</p>
+              <p><i class="far fa-user"></i> Teacher: Cole Chandler</p>
+            </div>
+            <div class="card card-pink">
+              <h3>UNIT I</h3>
+              <p><i class="far fa-file"></i> 16 Files</p>
+              <p><i class="far fa-user"></i> Teacher: Cole Chandler</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-lessons">
+          <div class="section-header">
+            <h2>Lessons</h2>
+            <a href="#" class="view-all">View All ></a>
+          </div>
+          <table class="lesson-table">
+            <thead>
+              <tr>
+                <th>Class</th>
+                <th>Teacher Name</th>
+                <th>Starting</th>
+                <th>Material</th>
+                <th>Payment</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>A1</td>
+                <td>Bernard Carr</td>
+                <td>12.07.2022</td>
+                <td><a href="#">Download</a></td>
+                <td><span class="status done">Done</span></td>
+              </tr>
+              <tr>
+                <td>A1</td>
+                <td>Henry Poole</td>
+                <td>17.07.2022</td>
+                <td><a href="#">Download</a></td>
+                <td><span class="status pending">Pending</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+
+      <aside class="sidebar-right">
+        <div class="profile-box">
+          <div class="profile-img">
+            <img src="https://via.placeholder.com/80" alt="Avatar" />
+          </div>
+          <h3>Stella Walton</h3>
+          <p>Student</p>
+          <button class="btn-profile">Profile</button>
+        </div>
+
+        <div class="calendar-box">
+          <h4>December 2022</h4>
+          <div class="calendar-placeholder">[Calendar Placeholder]</div>
+        </div>
+
+        <div class="reminders">
+          <h4>Reminders</h4>
+          <div class="reminder-item">
+            <div class="icon-bell"><i class="fas fa-bell"></i></div>
+            <div>
+              <p>Eng - Vocabulary test</p>
+              <span>12 Dec 2022, Friday</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>
