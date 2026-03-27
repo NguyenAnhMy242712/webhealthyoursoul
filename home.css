@@ -10,30 +10,30 @@ body {
 }
 /* HEADER */
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 40px;
-    background: white;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: white;
+  align-items: center;
 }
 
 header nav a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #333;
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
 }
 
 .logo {
-    font-weight: bold;
-    font-size: 20px;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .btn {
-    padding: 8px 15px;
-    border: none;
-    background: #6c63ff;
-    color: white;
-    border-radius: 5px;
+  padding: 8px 15px;
+  border: none;
+  background: #6c63ff;
+  color: white;
+  border-radius: 5px;
 }
 /* CONTAINER */
 section {
@@ -47,31 +47,86 @@ section h2 {
 
 /* HERO */
 .hero {
-  background: linear-gradient(135deg, #f3f0ff, #ffffff);
-  border-radius: 20px;
-  margin: 20px;
-  padding: 80px 20px;
-  text-align: center;
-  position: relative;
-}
-
-.hero h1 {
-  font-size: 42px;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  color: #666;
-}
-
-.primary {
-  margin-top: 20px;
-  padding: 12px 25px;
-  border-radius: 25px;
-  border: none;
-  background: #6c63ff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+  /* Màu nền Gradient tím sâu */
+  background: linear-gradient(135deg, #2e026d 0%, #5d00b1 50%, #1a0033 100%);
+  background-image: url("dd0f9ff2b2b3904a39e4da1e77a1a6e8.jpg"); /* Chèn ảnh minh họa nếu có */
+  background-size: cover;
+  background-position: center;
   color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 500px;
+  z-index: 2;
+}
+
+/* Badge (Hỗ trợ tâm lý 24/7) */
+.badge {
+  background: rgba(209, 167, 212, 0.15);
+  backdrop-filter: blur(5px);
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(155, 87, 151, 0.3);
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/* Tiêu đề chính */
+.hero h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+/* Đoạn giới thiệu */
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+/* Nút bấm */
+.primary {
+  background: linear-gradient(90deg, #ff4bb4, #ff8dcf);
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
+  box-shadow: 0 10px 20px rgba(255, 75, 180, 0.3);
+  transition: 0.3s;
+}
+
+.primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 25px rgba(255, 75, 180, 0.5);
+}
+
+/* Tạo hiệu ứng đốm sáng mờ ảo phía sau */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 70%
+  );
+  top: 10%;
+  right: 20%;
+  z-index: 1;
 }
 
 /* GRID */
@@ -102,10 +157,61 @@ section h2 {
 }
 
 /* FEATURES */
+/* Tổng thể section */
 .features {
-  background: #f0f4ff;
-  border-radius: 20px;
-  margin: 20px;
+  padding: 50px 20px;
+  background-color: #fdfaf5; /* Màu nền hơi kem nhẹ giống hình */
+  text-align: center;
+}
+
+.features h2 {
+  font-family: "Serif", "Times New Roman"; /* Font chữ có chân cho sang trọng */
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #000;
+}
+
+/* Container chứa các card */
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Tự động xuống dòng trên thiết bị nhỏ */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Phong cách cho từng thẻ Card */
+.card {
+  background: #ffffff;
+  border-radius: 10px; /* Bo góc */
+  padding: 40px 20px;
+  width: 200px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Đổ bóng mờ nhẹ */
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hiệu ứng khi di chuột vào */
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Biểu tượng (Emoji hoặc Icon) */
+.card h3 {
+  font-size: 1.2rem;
+  color: #b89a67; /* Màu vàng đồng giống trong hình */
+  margin-bottom: 10px;
+}
+
+/* Mô tả ngắn */
+.card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
 }
 
 /* TEST */
@@ -124,17 +230,220 @@ section h2 {
 
 /* EXPERT */
 .expert {
-  background: #eefaf5;
+  position: relative;
+  background: url("https://images.unsplash.com/photo-1505691938895-1758d7feb511")
+    center/cover no-repeat;
   border-radius: 20px;
   margin: 20px;
+  overflow: hidden;
+  padding: 80px 40px;
+}
+
+/* overlay mờ */
+.expert .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 248, 240, 0.85);
+}
+
+/* container */
+.expert-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* LEFT */
+.expert-left {
+  max-width: 500px;
+}
+
+.expert-left .tag {
+  color: #c49b66;
+  font-size: 14px;
+}
+
+.expert-left h2 {
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.expert-left p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* RIGHT GRID */
+.expert-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* CARD */
+.expert-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.expert-card:hover {
+  transform: translateY(-5px);
+}
+
+.expert-card h3 {
+  margin-bottom: 10px;
+}
+
+/* BUTTON */
+.primary {
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  background: #6c63ff;
+  color: white;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .expert-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* RELAX */
+/* SECTION */
 .relax {
-  background: #fffaf0;
-  border-radius: 20px;
-  margin: 20px;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
 }
+
+/* WRAPPER */
+.relax-wrapper {
+  background: #f7f7fb;
+  border-radius: 25px;
+  padding: 40px;
+  max-width: 1100px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* HEADER */
+.relax-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.relax-top h2 {
+  font-size: 24px;
+}
+
+.relax-top p {
+  max-width: 300px;
+  font-size: 13px;
+  color: #777;
+}
+
+/* CARD LIST */
+.relax-cards {
+  display: flex;
+  gap: 20px;
+}
+
+/* CARD */
+.relax-card {
+  flex: 1;
+  background: white;
+  border-radius: 18px;
+  padding: 20px;
+  border: 2px solid #e6e6f5;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.relax-card:hover {
+  border-color: #6c63ff;
+  transform: translateY(-5px);
+}
+
+/* HEADER CARD */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* BADGE */
+.badge {
+  background: #f1f0ff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #6c63ff;
+}
+
+/* ICON */
+.icon {
+  width: 30px;
+  height: 30px;
+  background: #6c63ff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* VARIANT màu vàng */
+.icon.yellow {
+  background: #f4b400;
+}
+
+/* DESC */
+.desc {
+  font-size: 13px;
+  color: #666;
+  margin: 15px 0;
+}
+
+/* IMAGE */
+.relax-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+}
+
+/* DOTS */
+.dots {
+  text-align: center;
+  margin-top: 20px;
+  color: #aaa;
+  font-size: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .relax-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .relax-cards {
+    flex-direction: column;
+  }
+}
+
 /* EMERGENCY */
 .emergency {
   background: #ff4d4d;
