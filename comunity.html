@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giao diện Mạng Xã Hội Học Thuật</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="comunity.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="feed-section">
+        <section class="banner">
+          <div class="banner-text">
+            <h1>Welcome back, Stella Walton!</h1>
+            <p>
+              New French speaking classes are available.<br />Étudier en France
+              for B1 and B2 levels. <a href="#">Learn more</a>
+            </p>
+            <button class="btn-buy">Buy Lesson</button>
+          </div>
+          <div class="banner-img">
+            <img
+              src="https://via.placeholder.com/150"
+              alt="Books Illustration"
+            />
+          </div>
+        </section>
+
+        <div class="create-post-card">
+          <div class="create-post-input-group">
+            <img
+              src="https://randomuser.me/api/portraits/women/44.jpg"
+              alt="Your Avatar"
+              class="create-post-avatar"
+            />
+            <div class="create-post-input">Hôm nay bạn học được gì mới?</div>
+          </div>
+          <div class="create-post-actions">
+            <div class="action-item photo">
+              <i class="fas fa-image"></i>
+              <span>Ảnh</span>
+            </div>
+            <div class="action-item video">
+              <i class="fas fa-video"></i>
+              <span>Video</span>
+            </div>
+            <div class="action-item">
+              <i class="fas fa-tags"></i>
+              <span>Gắn thẻ bài học</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="post-card">
+          <div class="post-header">
+            <img
+              src="https://randomuser.me/api/portraits/men/32.jpg"
+              alt="Mark Lee"
+              class="post-author-avatar"
+            />
+            <div class="post-info-meta">
+              <span class="post-author-name">Mark Lee</span>
+              <span class="post-time">5 giờ trước</span>
+            </div>
+          </div>
+          <div class="post-content">
+            <p class="post-caption">
+              Vừa hoàn thành xong bài lab về Process Scheduling trong Hệ điều
+              hành! Cảm giác hiểu sâu hơn về cách CPU quản lý các tác vụ. Đoạn
+              code C++ này chạy mượt mà.
+            </p>
+            <p class="post-hashtags">
+              #OperatingSystem #ProcessScheduling #CS #HocTap
+            </p>
+
+            <div class="post-media-container">
+              <img
+                src="https://img.icons8.com/clouds/500/000000/macbook.png"
+                alt="OS Code Diagram"
+                class="post-image"
+              />
+            </div>
+          </div>
+          <div class="post-footer">
+            <button class="post-action-btn">
+              <i class="far fa-thumbs-up"></i> Thích
+            </button>
+            <button class="post-action-btn">
+              <i class="far fa-comment"></i> Bình luận
+            </button>
+            <button class="post-action-btn">
+              <i class="far fa-share-square"></i> Chia sẻ
+            </button>
+          </div>
+        </div>
+
+        <div class="post-card">
+          <div class="post-header">
+            <img
+              src="https://randomuser.me/api/portraits/men/55.jpg"
+              alt="Jung Jaehyun"
+              class="post-author-avatar"
+            />
+            <div class="post-info-meta">
+              <span class="post-author-name">Jung Jaehyun</span>
+              <span class="post-time">Hôm qua lúc 14:30</span>
+            </div>
+          </div>
+          <div class="post-content">
+            <p class="post-caption">
+              Demo nhanh về mô hình nhận diện vật thể YOLOv8 mình vừa train
+              xong. Nó có thể phân biệt chó và mèo khá chính xác ngay cả trong
+              điều kiện ánh sáng yếu!
+            </p>
+            <p class="post-hashtags">
+              #AI #ComputerVision #YOLOv8 #MachineLearning #DeepLearning
+            </p>
+
+            <div class="post-media-container">
+              <video class="post-video" controls>
+                <source
+                  src="https://www.w3schools.com/html/mov_bbb.mp4"
+                  type="video/mp4"
+                />
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+              </video>
+            </div>
+          </div>
+          <div class="post-footer">
+            <button class="post-action-btn">
+              <i class="far fa-thumbs-up"></i> Thích (125)
+            </button>
+            <button class="post-action-btn">
+              <i class="far fa-comment"></i> Bình luận (45)
+            </button>
+            <button class="post-action-btn">
+              <i class="far fa-share-square"></i> Chia sẻ
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="calendar-widget">
+          <div class="calendar-header">
+            <div class="calendar-month">Nov 2020</div>
+            <div class="calendar-nav">
+              <i class="fas fa-chevron-left"></i>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </div>
+          <div class="calendar-grid">
+            <div class="day-label">Mon</div>
+            <div class="day-label">Tue</div>
+            <div class="day-label">Wed</div>
+            <div class="day-label">Thu</div>
+            <div class="day-label">Fri</div>
+            <div class="day-label">Sat</div>
+            <div class="day-label">Sun</div>
+
+            <div class="calendar-day empty"></div>
+            <div class="calendar-day empty"></div>
+            <div class="calendar-day empty"></div>
+            <div class="calendar-day empty"></div>
+            <div class="calendar-day empty"></div>
+            <div class="calendar-day empty"></div>
+            <div class="calendar-day empty"></div>
+
+            <div class="calendar-day">1</div>
+            <div class="calendar-day">2</div>
+            <div class="calendar-day">3</div>
+            <div class="calendar-day">4</div>
+            <div class="calendar-day">5</div>
+            <div class="calendar-day">6</div>
+            <div class="calendar-day">7</div>
+
+            <div class="calendar-day">8</div>
+            <div class="calendar-day today">9</div>
+            <div class="calendar-day">10</div>
+            <div class="calendar-day">11</div>
+            <div class="calendar-day">12</div>
+            <div class="calendar-day event">13</div>
+            <div class="calendar-day">14</div>
+
+            <div class="calendar-day">15</div>
+            <div class="calendar-day">16</div>
+            <div class="calendar-day">17</div>
+            <div class="calendar-day">18</div>
+            <div class="calendar-day">19</div>
+            <div class="calendar-day">20</div>
+            <div class="calendar-day">21</div>
+
+            <div class="calendar-day">22</div>
+            <div class="calendar-day">23</div>
+            <div class="calendar-day">24</div>
+            <div class="calendar-day">25</div>
+            <div class="calendar-day">26</div>
+            <div class="calendar-day">27</div>
+            <div class="calendar-day">28</div>
+
+            <div class="calendar-day">29</div>
+            <div class="calendar-day">30</div>
+          </div>
+        </div>
+        <div class="reminder-widget">
+          <div class="reminder-header">
+            <h4>Reminders</h4>
+          </div>
+          <div class="reminder-item">
+            <div class="icon-bell"><i class="fas fa-bell"></i></div>
+            <div>
+              <p>Eng - Vocabulary test</p>
+              <span>12 Dec 2022, Friday</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="online-users-widget">
+          <div class="online-header">
+            <div class="online-title">Online Users</div>
+            <a href="#" class="see-all">See all</a>
+          </div>
+          <div class="user-list">
+            <div class="user-item">
+              <div class="user-info-group">
+                <img
+                  src="https://randomuser.me/api/portraits/women/65.jpg"
+                  alt="Maren Maureen"
+                  class="user-avatar"
+                />
+                <span class="user-name">Maren Maureen</span>
+              </div>
+              <div class="online-status-dot"></div>
+            </div>
+
+            <div class="user-item">
+              <div class="user-info-group">
+                <img
+                  src="https://randomuser.me/api/portraits/women/68.jpg"
+                  alt="Jenniffer Jane"
+                  class="user-avatar"
+                />
+                <span class="user-name">Jenniffer Jane</span>
+              </div>
+              <div class="online-status-dot"></div>
+            </div>
+
+            <div class="user-item">
+              <div class="user-info-group">
+                <img
+                  src="https://randomuser.me/api/portraits/men/81.jpg"
+                  alt="Ryan Herwinds"
+                  class="user-avatar"
+                />
+                <span class="user-name">Ryan Herwinds</span>
+              </div>
+              <div class="online-status-dot"></div>
+            </div>
+
+            <div class="user-item">
+              <div class="user-info-group">
+                <img
+                  src="https://randomuser.me/api/portraits/women/71.jpg"
+                  alt="Kierra Culhane"
+                  class="user-avatar"
+                />
+                <span class="user-name">Kierra Culhane</span>
+              </div>
+              <div class="online-status-dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

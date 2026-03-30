@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard UI</title>
+  <link rel="stylesheet" href="/asset/css/admin/admin_dashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="main">
+  <!-- Header -->
+  <div class="dashboard">
+  <div class="header">
+    <div>
+      <h2>Dashboard</h2>
+      <p>10:30 PM - 14th August 2022</p>
+    </div>
+
+    <div class="header-right">
+      <input type="text" placeholder="Search">
+      <div class="avatar"></div>
+    </div>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <p>Total Earnings</p>
+      <h3>$1.2M</h3>
+    </div>
+
+    <div class="card">
+      <p>Total Balance</p>
+      <h3>$1.1M</h3>
+    </div>
+
+    <div class="card">
+      <p>Available Balance</p>
+      <h3>$100K</h3>
+    </div>
+
+    <div class="card">
+      <p>Total Projects</p>
+      <h3>1675</h3>
+    </div>
+  </div>
+
+
+  <!-- Content -->
+  <div class="main-charts-container">
+
+    <div class="chart-container large-chart">
+        <div class="chart-header">
+            <h3>Projects</h3>
+        </div>
+        <div class="chart-body">
+            <div class="bar-chart-simulated">
+                <div class="bar-group">
+                    <div class="bar bar-total" style="height: 50%;"></div>
+                    <div class="bar bar-todo" style="height: 20%;"></div>
+                    <div class="bar bar-completed" style="height: 10%;"></div>
+                    <div class="bar bar-overdue" style="height: 5%;"></div>
+                    <span class="year-label">2017</span>
+                </div>
+                <div class="bar-group">
+                    <div class="bar bar-total" style="height: 70%;"></div>
+                    <div class="bar bar-todo" style="height: 15%;"></div>
+                    <div class="bar bar-completed" style="height: 25%;"></div>
+                    <div class="bar bar-overdue" style="height: 8%;"></div>
+                    <span class="year-label">2018</span>
+                </div>
+                <div class="bar-group">
+                    <div class="bar bar-total" style="height: 65%;"></div>
+                    <div class="bar bar-todo" style="height: 18%;"></div>
+                    <div class="bar bar-completed" style="height: 45%;"></div>
+                    <div class="bar bar-overdue" style="height: 12%;"></div>
+                    <span class="year-label">2019</span>
+                </div>
+                <div class="bar-group">
+                    <div class="bar bar-total" style="height: 60%;"></div>
+                    <div class="bar bar-todo" style="height: 22%;"></div>
+                    <div class="bar bar-completed" style="height: 75%;"></div>
+                    <div class="bar bar-overdue" style="height: 15%;"></div>
+                    <span class="year-label">2020</span>
+                </div>
+                 <div class="bar-group">
+                    <div class="bar bar-total" style="height: 68%;"></div>
+                    <div class="bar bar-todo" style="height: 20%;"></div>
+                    <div class="bar bar-completed" style="height: 50%;"></div>
+                    <div class="bar bar-overdue" style="height: 85%;"></div>
+                    <span class="year-label">2021</span>
+                </div>
+                <div class="y-axis-sim">
+                    <span>100</span><span>80</span><span>60</span><span>40</span><span>20</span><span>0</span>
+                </div>
+            </div>
+            <div class="chart-legend">
+                <span class="legend-item"><i class="dot total"></i> Total</span>
+                <span class="legend-item"><i class="dot todo"></i> To do</span>
+                <span class="legend-item"><i class="dot completed"></i> Completed</span>
+                <span class="legend-item"><i class="dot overdue"></i> Overdue</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="chart-container large-chart">
+        <div class="chart-header">
+            <h3>Analytics Report</h3>
+        </div>
+        <div class="chart-body">
+            <svg class="line-chart-simulated" viewBox="0 0 500 200" preserveAspectRatio="none">
+                <path d="M0,180 C50,120 100,200 150,150 S250,100 300,120 S400,160 500,140" stroke="#f1a9a0" stroke-width="3" fill="none" />
+                <circle cx="0" cy="180" r="4" fill="#f1a9a0" /><circle cx="150" cy="150" r="4" fill="#f1a9a0" /><circle cx="300" cy="120" r="4" fill="#f1a9a0" /><circle cx="500" cy="140" r="4" fill="#f1a9a0" />
+
+                <path d="M0,160 C50,80 100,120 150,100 S250,60 300,90 S400,120 500,100" stroke="#663399" stroke-width="3" fill="none" />
+                <circle cx="0" cy="160" r="4" fill="#663399" /><circle cx="150" cy="100" r="4" fill="#663399" /><circle cx="300" cy="90" r="4" fill="#663399" /><circle cx="500" cy="100" r="4" fill="#663399" />
+            </svg>
+            <div class="x-axis-labels">
+                <span>Jan</span><span>Feb</span><span>March</span><span>April</span><span>May</span><span>June</span><span>July</span><span>Aug</span>
+            </div>
+             <div class="y-axis-sim-line">
+                <span>50</span><span>40</span><span>30</span><span>20</span><span>10</span><span>0</span>
+            </div>
+            <div class="chart-legend-line">
+                <span class="legend-item"><i class="dot report-2020"></i> 2020 Report</span>
+                <span class="legend-item"><i class="dot report-2021"></i> 2021 Report</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="summary-card-container">
+        <div class="earning-card purple-gradient-card">
+            <p class="card-subtitle">Your earning of this month</p>
+            <h2 class="card-main-value">$677,000</h2>
+            
+            <div class="circular-chart-box">
+                <div class="circular-chart" style="background: conic-gradient(#fff 85%, rgba(255,255,255,0.2) 0);">
+                    <div class="chart-inner-text">
+                        <span class="percent">85%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-footer-stats">
+                <div class="stat-item">
+                    <span class="stat-label">Estimated</span>
+                    <span class="stat-value">$455K</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Calculated</span>
+                    <span class="stat-value">$546K</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div> <div class="bottom-charts-row">
+        
+        <div class="small-chart-card">
+            <div class="stat-header">
+                <span class="stat-label">Total Sales</span>
+                <span class="stat-change positive">+7%</span>
+            </div>
+            <h3 class="stat-main-value">$1.2M</h3>
+            <svg class="mini-trend-chart" viewBox="0 0 100 40" preserveAspectRatio="none">
+                <path d="M0,35 Q20,20 40,30 T80,10 Q90,15 100,5" stroke="#663399" stroke-width="2" fill="none" />
+            </svg>
+        </div>
+
+        <div class="small-chart-card">
+            <div class="stat-header">
+                <span class="stat-label">Total Balance</span>
+                <span class="stat-change positive">+17%</span>
+            </div>
+            <h3 class="stat-main-value">$1,534</h3>
+            <svg class="mini-trend-chart" viewBox="0 0 100 40" preserveAspectRatio="none">
+                <path d="M0,35 Q20,38 40,32 T80,36 Q90,30 100,34" stroke="#e0b0ff" stroke-width="2" fill="none" />
+            </svg>
+        </div>
+
+        <div class="small-chart-card flex-center">
+            <div class="stat-header">
+                <span class="stat-label">Available Balance</span>
+                <span class="stat-change positive">+71%</span>
+            </div>
+            <h3 class="stat-main-value">$100K</h3>
+            <div class="mini-pie-chart" style="background: conic-gradient(#663399 75%, #f1a9a0 0);"></div>
+        </div>
+
+        <div class="small-chart-card flex-center">
+            <div class="stat-header">
+                <span class="stat-label">Total Projects</span>
+                <span class="stat-change positive">+27%</span>
+            </div>
+            <h3 class="stat-main-value">1675</h3>
+            <div class="mini-bar-chart">
+                <div class="mini-bar" style="height: 30%"></div>
+                <div class="mini-bar" style="height: 50%"></div>
+                <div class="mini-bar" style="height: 40%"></div>
+                <div class="mini-bar" style="height: 70%"></div>
+                <div class="mini-bar" style="height: 60%"></div>
+                <div class="mini-bar" style="height: 90%"></div>
+                <div class="mini-bar" style="height: 75%"></div>
+            </div>
+        </div>
+
+        <div class="small-stat-card purple-card">
+            <i class="icon-placeholder">📄</i> <h3 class="stat-main-value">1.1K</h3>
+            <p class="stat-label">Monthly Invoices</p>
+            <button class="arrow-btn">➔</button>
+        </div>
+
+        <div class="small-stat-card purple-card">
+            <i class="icon-placeholder">📂</i> <h3 class="stat-main-value">10K</h3>
+            <p class="stat-label">Project Completed</p>
+            <button class="arrow-btn">➔</button>
+        </div>
+
+    </div>
+    </div>
+
+<script src="/asset/js/admin_dashboard.js"></script>
+</body>
+</html>

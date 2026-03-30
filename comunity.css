@@ -1,0 +1,401 @@
+:root {
+  --primary-purple: #7b61ff; /* Màu tím chính */
+  --bg-color: #f8f9fe; /* Màu nền tổng thể sáng */
+  --card-bg: #ffffff; /* Màu nền thẻ trắng */
+  --text-main: #333333;
+  --text-muted: #888888;
+  --border-color: #e0e0e0;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* --- Bố cục Chính --- */
+.main-container {
+  display: flex;
+  width: 100%;
+  max-width: 1400px; /* Độ rộng tối đa để không quá tràn màn hình */
+  gap: 30px;
+}
+
+/* --- PHẦN BÊN TRÁI: FEED BÀI ĐĂNG (Chiếm diện tích lớn hơn) --- */
+.feed-section {
+  flex: 3; /* Chiếm 3/4 độ rộng */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+/* Banner Section */
+.banner {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.btn-buy {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+/* Thanh tạo bài đăng mới */
+.create-post-card {
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.create-post-input-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.create-post-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.create-post-input {
+  flex-grow: 1;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: 1px solid var(--border-color);
+  background-color: #f0f2f5; /* Màu nền input nhẹ kiểu Facebook */
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+.create-post-actions {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid var(--border-color);
+  padding-top: 10px;
+}
+
+.action-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.action-item:hover {
+  background-color: #f0f2f5;
+}
+
+.action-item i {
+  font-size: 1.2rem;
+}
+
+.action-item.photo i {
+  color: #45bd62;
+} /* Màu xanh lá cho ảnh */
+.action-item.video i {
+  color: #f3425f;
+} /* Màu đỏ cho video */
+
+/* Thẻ bài đăng (Feed Post Card) */
+.post-card {
+  background-color: var(--card-bg);
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  overflow: hidden; /* Để bo góc nội dung bên trong */
+}
+
+/* Header của bài đăng */
+.post-header {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.post-author-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.post-info-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-author-name {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.post-time {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Nội dung bài đăng (Caption, Hashtag, Media) */
+.post-content {
+  padding: 0 15px 15px 15px;
+}
+
+.post-caption {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.post-hashtags {
+  color: var(--primary-purple);
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+/* Khu vực hiển thị Media (Ảnh/Video) */
+.post-media-container {
+  width: 100%;
+  /* background-color: #f0f0f0; */
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.post-video {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Footer của bài đăng (Like/Comment/Share) */
+.post-footer {
+  padding: 10px 15px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-around;
+}
+
+.post-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background 0.2s;
+  background: none;
+  border: none;
+  font-size: 1rem;
+}
+
+.post-action-btn:hover {
+  background-color: #f0f2f5;
+}
+
+/* --- PHẦN BÊN PHẢI: SIDEBAR (Giữ nguyên Lịch & Người dùng) --- */
+.sidebar-section {
+  flex: 1.2; /* Chiếm 1/4 độ rộng */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: sticky; /* Giữ sidebar cố định khi cuộn */
+  top: 20px;
+  height: fit-content;
+}
+
+/* Widget Lịch */
+.calendar-widget {
+  background-color: var(--card-bg);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.calendar-month {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #4a148c; /* Tím đậm */
+}
+
+.calendar-nav {
+  display: flex;
+  gap: 15px;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  text-align: center;
+}
+
+.day-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+
+.calendar-day {
+  font-size: 0.95rem;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.calendar-day.today {
+  background-color: var(--primary-purple);
+  color: white;
+  font-weight: 600;
+}
+
+.calendar-day.event {
+  background-color: #e6e1ff; /* Tím nhạt */
+  color: var(--primary-purple);
+}
+
+.calendar-day.empty {
+  visibility: hidden;
+}
+
+/* Widget Người dùng trực tuyến */
+.online-users-widget {
+  background-color: var(--card-bg);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+}
+
+.online-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.online-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4a148c;
+}
+
+.see-all {
+  font-size: 0.9rem;
+  color: var(--primary-purple);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.user-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.user-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.user-info-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-name {
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.online-status-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #4caf50; /* Xanh lá trực tuyến */
+  border-radius: 50%;
+}
+.reminder-widget {
+  background-color: var(--card-bg);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+}
+
+.reminder-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.reminder-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-align: left;
+  margin-top: 15px;
+}
+
+.icon-bell {
+  background: #f0f4ff;
+  padding: 10px;
+  border-radius: 12px;
+  color: var(--primary-color);
+}

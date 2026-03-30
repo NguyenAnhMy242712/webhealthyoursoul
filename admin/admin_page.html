@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sidebar</title>
+  <link rel="stylesheet" href="/asset/css/admin/admin_page.css" />
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+<div class="sidebar" id="sidebar">
+  <div class="top">
+    <span class="logo">Engineering Insights</span>
+    <button id="toggleBtn">
+      <i data-feather="chevron-left"></i>
+    </button>
+  </div>
+
+  <ul class="menu">
+    <li><i data-feather="grid"></i><span>Dashboard</span></li>
+    <li><i data-feather="bar-chart-2"></i><span>Revenue</span></li>
+    <li><i data-feather="bell"></i><span>Notifications</span></li>
+    <li><i data-feather="pie-chart"></i><span>Analytics</span></li>
+    <li><i data-feather="users"></i><span>Likes</span></li>
+    <li><i data-feather="check-circle"></i><span>Wallets</span></li>
+  </ul>
+
+  <div class="bottom">
+    <li><i data-feather="home"></i><span>Home Page</span></li>
+    <li><i data-feather="log-out"></i><span>Logout</span></li>
+  </div>
+</div>
+
+<script src="/asset/js/admin_page.js"></script>
+<script>
+  feather.replace();
+</script>
+</body>
+</html>
