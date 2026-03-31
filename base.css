@@ -1,0 +1,151 @@
+/* 1. ĐỊNH NGHĨA BIẾN TOÀN CỤC & THEMES */
+:root {
+    --bg-body: #ffffff;
+    --text-main: #333333;
+    --primary-color: #5dade2; 
+    --radius-common: 15px;
+    --transition-speed: 0.3s;
+}
+
+[data-theme="green"] {
+    --bg-body: #e8f5e9;
+    --text-main: #1b5e20;
+    --primary-color: #4caf50;
+}
+
+[data-theme="pink"] {
+    --bg-body: #fdf1f3;
+    --text-main: #880e4f;
+    --primary-color: #e91e63;
+}
+
+[data-theme="dark"] {
+    --bg-body: #1a1a1a;
+    --text-main: #ffffff;
+    --primary-color: #3498db;
+}
+
+/* 2. CÀI ĐẶT CHUNG (RESET & BODY) */
+body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    transition: all var(--transition-speed);
+    font-family: sans-serif;
+    margin: 0;
+}
+
+/* 3. HEADER & NAVIGATION */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--bg-body);
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+header nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--text-main);
+}
+
+/* 4. ACTIONS & THEME SWITCH */
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.theme-switch {
+    display: flex;
+    gap: 10px;
+}
+
+.color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: var(--transition-speed);
+}
+
+.color:hover { transform: scale(1.2); }
+.blue  { background-color: #5d5fef; }
+.green { background-color: #43a047; }
+.pink  { background-color: #ff80ab; }
+
+/* 5. USER MENU & DROPDOWN */
+.user-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.btn {
+    padding: 8px 15px;
+    border: none;
+    background: #6c63ff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: var(--bg-body); /* Đổi về màu theme để đồng bộ */
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+    z-index: 100;
+    border-radius: 8px;
+    margin-top: 10px;
+    border: 1px solid var(--primary-color);
+}
+
+.dropdown-content a {
+    color: var(--text-main);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(0,0,0,0.05);
+    color: var(--primary-color);
+}
+
+/* Hiển thị Dropdown & Animation */
+.show {
+    display: block;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 6. CONTENT & FOOTER */
+.content-card {
+    background: var(--bg-body);
+    border: 1px solid var(--primary-color);
+    border-radius: var(--radius-common);
+    padding: 20px;
+    margin: 15px 0;
+}
+
+footer {
+    background-color: var(--bg-body);
+    border-top: 1px solid var(--primary-color);
+    padding: 20px;
+    text-align: center;
+}

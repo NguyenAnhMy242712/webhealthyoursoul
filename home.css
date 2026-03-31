@@ -53,7 +53,7 @@ section h2 {
   padding: 0 10%;
   /* Màu nền Gradient tím sâu */
   background: linear-gradient(135deg, #2e026d 0%, #5d00b1 50%, #1a0033 100%);
-  background-image: url("dd0f9ff2b2b3904a39e4da1e77a1a6e8.jpg"); /* Chèn ảnh minh họa nếu có */
+  background-image: url("main.jpg"); /* Chèn ảnh minh họa nếu có */
   background-size: cover;
   background-position: center;
   color: white;
@@ -149,12 +149,6 @@ section h2 {
   transform: translateY(-5px);
 }
 
-/* PROBLEMS */
-.problems {
-  background: #fff;
-  border-radius: 20px;
-  margin: 20px;
-}
 
 /* FEATURES */
 /* Tổng thể section */

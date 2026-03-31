@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MindCare - Hỗ trợ tâm lý</title>
+    <link rel="stylesheet" href="base.css">
+  </head>
+<body onload="applyTheme()">
+
+    <header>
+        <div class="logo">MindCare</div>
+        <nav>
+            <a href="#">Trang chủ</a>
+            <a href="#">Kiến thức</a>
+            <a href="#">Cộng đồng</a>
+            <a href="#">Tư vấn</a>
+            <a href="#">Test</a>
+        </nav>
+
+        <div class="actions">
+            <div class="theme-switch">
+                <span data-theme="blue" class="color blue"></span>
+                <span data-theme="green" class="color green"></span>
+                <span data-theme="pink" class="color pink"></span>
+            </div>
+
+            <div class="user-menu">
+                <button class="btn" id="btnDropdown" onclick="toggleMenu()">Đăng nhập </button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Thông tin cá nhân</a>
+                    <a href="#">Lịch sử bài Test</a>
+                    <a href="#" style="color: red; border-top: 1px solid #eee;">Đăng xuất</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding: 40px;">
+        <h1>Chào mừng bạn đến với MindCare</h1>
+    </main>
+
+    <footer>
+      <p>© 2026 MindCare | Safe Space for Mental Health</p>
+    </footer>
+    <script src="base.js"></script>
+</body>
+</html>
